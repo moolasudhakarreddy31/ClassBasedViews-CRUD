@@ -1,0 +1,16 @@
+{% extends 'crudapp/base.html' %}
+
+<div class="container">
+    {% block body_block %}
+    <h1>company's Information</h1>
+    <hr>
+    <h1>{{company.name}} Information</h1>
+    <h2>CEO :{{company.ceo}}</h2>
+    <h2>Location:{{company.location}}</h2>
+    <!-- <a href='/update/<int:pk>/' class="btn btn-lg btn-warning">Update Information</a> -->
+    <a href='/update/{{company.id}}' class="btn btn-lg btn-warning">Update Information</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href='/delete/{{company.id}}' class="btn btn-lg btn-danger">Delete Information</a>
+
+    {% endblock %}
+</div>

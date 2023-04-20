@@ -1,0 +1,17 @@
+{% extends 'crudapp/base.html' %}
+
+<div class="container">
+    {% block body_block %}
+    <h1>List Of Employee's Information</h1>
+    <hr>
+    {% for company in company_list %}
+    <!-- in above comapany_list is context -->
+        <!-- <h2> <a href="/{{company.id}}">{{company.name}}</a></h2> -->
+        <h2> <a href="{% url 'company_detail' pk=company.pk %}">{{company.name}}</a></h2>
+    {% endfor %}
+    <br>
+    <a href="/create" class="btn btn-primary">Add New company</a>
+    {% endblock %}
+
+
+</div>
